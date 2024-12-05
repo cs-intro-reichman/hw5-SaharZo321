@@ -118,18 +118,18 @@ public class Scrabble {
 				break;
 			}
 			if (!MyString.subsetOf(input, hand)) {
-				System.out.println("Invalid Choice. Try again");
+				System.out.println("Invalid word. Try again.");
 			} else {
 				if (!isWordInDictionary(input)) {
-					System.out.println("No such word in the dictionary. Try again");
+					System.out.println("No such word in the dictionary. Try again.");
 				} else {
 					int currentScore = wordScore(input);
 					score += currentScore;
-					System.out.printf("%s earned %d points. Total: %d points\n", input, currentScore, score);
+					System.out.printf("%s earned %d points. Score: %d points\n", input, currentScore, score);
 					hand = MyString.remove(hand, input);
+					System.out.println();
 				}
 			}
-			System.out.println();
 		}
 		if (hand.length() == 0) {
 			System.out.println("Ran out of letters. Total score: " + score + " points");
