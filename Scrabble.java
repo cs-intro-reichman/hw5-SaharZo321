@@ -136,7 +136,6 @@ public class Scrabble {
 		} else {
 			System.out.println("End of hand. Total score: " + score + " points");
 		}
-		System.out.println();
 
 	}
 
@@ -162,6 +161,7 @@ public class Scrabble {
 			} else {
 				System.out.println("Invalid command.");
 			}
+			System.out.println();
 		}
 	}
 
