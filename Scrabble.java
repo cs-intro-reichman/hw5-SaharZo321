@@ -64,12 +64,13 @@ public class Scrabble {
 		for (int i = 0; i < word.length(); i++) {
 			char c = word.charAt(i);
 			int index = c - 'a';
-			score += SCRABBLE_LETTER_VALUES[index];
+			score += SCRABBLE_LETTER_VALUES[index] * word.length();
+		
 		}
 		if (word.length() == HAND_SIZE) {
 			score += 50;
 		}
-		if (word.contains("runi")) {
+		if (MyString.subsetOf("runi", word)) {
 			score += 1000;
 		}
 		return score;
